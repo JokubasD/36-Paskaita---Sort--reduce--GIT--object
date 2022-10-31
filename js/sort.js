@@ -1,29 +1,28 @@
 'use strict';
 console.log('sort.js');
 
-const users = [
-    {
-        name: 'James',
-        age: 25,
-        gender: 'male',
-        town: 'London'
-    },
-    {
-        name: 'Mike',
-        age: 35,
-        gender: 'male',
-        town: 'Kaunas'
-    },
-    {
-        name: 'Jane',
-        age: 27,
-        gender: 'female',
-        town: 'Kaunas'
-    },
-    {
-        name: 'June',
-        age: 47,
-        gender: 'female',
-        town: 'London'
+const words = ['z', 'a', 'm', 'h']
+const nums = [5, 10, 1, 50, 12]
+console.log(' words ===',  words);
+console.log('nums ===', nums);
+
+// words from a-z
+console.log('words.sort() ===', words.sort());
+console.log('words.reverse() ===', words.reverse());
+
+//numbers in increasing order
+// nums.sort((a, b) => a - b)
+
+
+nums.sort((a, b) => {
+    const difference = a - b
+    if (difference > 0){
+        return 1;
+    } else if (difference < 0){
+        return -1;
+    } else if (difference === 0){
+        return 0;
     }
-]
+})
+console.log('nums ===', nums);
+
